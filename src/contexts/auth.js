@@ -1,5 +1,6 @@
 import {useState, useEffect, createContext} from 'react';
 import firebase from '../services/firebaseConnection';
+import {toast} from 'react-toastify';
 
 export const AuthContext = createContext({});
 
@@ -49,7 +50,7 @@ function AuthProvider({ children }){
             setUser(data);
             storageUser(data);
             setLoadingAuth(false);
-
+            toast.success('Bem vindo de volta!');
         })
         .catch((error) => {
             console.log(error);
@@ -58,6 +59,7 @@ function AuthProvider({ children }){
             }else if(error.code === 'auth/wrong-password') {
                 setErrorMessage('A senha inserida está incorreta.');
             }
+            toast.error('Algo deu errado!');
             setLoadingAuth(false);
         })
     }
@@ -85,6 +87,7 @@ function AuthProvider({ children }){
                 setUser(data);
                 storageUser(data);
                 setLoadingAuth(false);
+                toast.success('Bem vindo a plataforma!');
             })
         })
         .catch((error) => {
@@ -94,6 +97,7 @@ function AuthProvider({ children }){
             }else if(error.code === 'auth/invalid-email') {
                 setErrorMessage('O email inserido não é válido.')
             }
+            toast.error('Algo deu errado!');
             setLoadingAuth(false);
         })
     }
