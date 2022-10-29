@@ -123,7 +123,9 @@ function AuthProvider({ children }){
             signIn,
             loadingAuth,
             errorMessage,
-            setErrorMessage
+            setErrorMessage,
+            setUser,
+            storageUser
         }}
         >
             {children}

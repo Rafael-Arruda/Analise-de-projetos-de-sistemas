@@ -21,19 +21,19 @@ export default function Header() {
                 <FiHome color="#fff" size={24}/>
                 Fazer pedido
             </Link>
-            <Link to='/dashboard'>
+            <Link to='/customer'>
                 <FiUser color="#fff" size={24}/>
                 Novo Cliente
             </Link>
-            <Link to='/dashboard'>
+            <Link to='/historic'>
                 <FiDatabase color="#fff" size={24}/>
                 Histórico
             </Link>
-            <Link to='/dashboard'>
+            <Link to='/completed'>
                 <FiCheckSquare color="#fff" size={24}/>
                 Concluídos
             </Link>
-            <Link to='/dashboard'>
+            <Link to='/profile'>
                 <FiSettings color="#fff" size={24}/>
                 Configurações
             </Link>

@@ -46,11 +46,20 @@
     color: #BF8B2E;
 }
 
+.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+
 @media screen and (max-width: 700px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
+    }
+
+    .content {
+        margin-left: 0;
     }
 
     .sidebar a {
@@ -65,7 +74,7 @@
     }
 }
 
-@media screen and (max-width) {
+@media screen and (max-width: 400px) {
     .sidebar a {
         text-align: center;
         float: none;
